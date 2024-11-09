@@ -1,10 +1,12 @@
 This squid card item you can use.
 
- exports.ox_inventory:closeInventory() you can change this at line 18.
+            
 
 for ox_inventory :
+                                                                                                                                      
+      exports.ox_inventory:closeInventory() you can change this at line 18.
 
-["squid-card"] = {
+      ["squid-card"] = {
 		label = "squidcard",
 		weight = 1,
 		stack = true,
@@ -13,16 +15,16 @@ for ox_inventory :
 		client = {
 			image = "squid-Game.png",
 		}
-	},
+	 },
     
-    for qb-invetory : shared/item.lua
+ for qb-invetory : shared/item.lua
 
     ["squid-card"] 	 = {["name"] = "squid-card",	["label"] = "squidcard", 	["weight"] = 1, 	["type"] = "item", 	 ["image"] = "squid-Game.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "squid card"},
 
 
 if you want to change number of card you can add this on cl_main.lua line '2'.
  
- RegisterCommand('squid-number', function(s,a,r)
+              RegisterCommand('squid-number', function(s,a,r)
     local newNum = a[1]
     if newNum then 
         local len = string.len(newNum)
@@ -37,12 +39,11 @@ if you want to change number of card you can add this on cl_main.lua line '2'.
     else
         exports["origen-notify"]:SendAlert('error', 'You must enter a new number for the card.')
     end
-end)
+             end)
  
+ This for add command like /squid-card and the card well be showen.
 
-    This for add command like /squid-card and the card well be showen.
-
-RegisterCommand('squid-card', function(s,a,r)
+            RegisterCommand('squid-card', function(s,a,r)
     if not opened then
         SendNUIMessage({
             action = "show"
@@ -54,4 +55,4 @@ RegisterCommand('squid-card', function(s,a,r)
         })
         SetNuiFocus(false, false)
     end
-end) 
+         end) 
