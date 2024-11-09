@@ -5,6 +5,7 @@ This squid card item you can use.
 for ox_inventory :
                                                                                                                                       
       exports.ox_inventory:closeInventory() you can change this at line 18.
+this item for ox_inventory
 
       ["squid-card"] = {
 		label = "squidcard",
