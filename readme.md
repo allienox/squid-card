@@ -21,8 +21,7 @@ for ox_inventory :
 
 
 if you want to change number of card you can add this on cl_main.lua line '2'.
-
-
+ 
  RegisterCommand('squid-number', function(s,a,r)
     local newNum = a[1]
     if newNum then 
@@ -31,8 +30,7 @@ if you want to change number of card you can add this on cl_main.lua line '2'.
             SendNUIMessage({
                 action = "newnumber",
                 number = newNum,
-
-            })
+         })
         else
             exports["origen-notify"]:SendAlert('error', 'The number must be between 1 - 10 numbers.')
         end
